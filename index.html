@@ -63,6 +63,11 @@
   display: inline-block;
   margin-top: 0px
   }
+
+  .selected {
+    background-color: white;
+  }
+
 #span {
   font-size: 12pt;
   font-weight: 500;
@@ -101,7 +106,14 @@ ul {
     <li>This exam will take approx. <strong>0-5 minutes.</strong></li>
   </ul>
   <div id="checkbox"></div>
+ 
   <span id="span">I promise to answer myself without help from anyone</span>
 </div>
+<script>
+  const checkbox =document.querySelector("#checkbox")
+  checkbox.addEventListener("click", function () {
+    checkbox.classList.toggle("selected")
+  })
+</script>
 </body>
 </html>
