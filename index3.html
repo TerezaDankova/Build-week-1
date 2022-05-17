@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My web page 3</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
      body{
         margin: 0px;
         background: #0e0e0e;
         height: 100%;
+        color: white;
+        text-align: center;
+        font-family: "Outfit", sans-serif;
+        
     }
     #main-div{
         background-image: url('bg.jpg');
@@ -19,12 +24,122 @@
         background-attachment: fixed;
         height: 100vh;
         width: 100vw;
+        
+       
     }
+    #logo 
+     {
+        background-color: green;
+        text-align: left;
+        position: relative;
+        top: 80px;
+        left: 80px;
+     }
+    #h1div 
+     {
+         background-color: green;
+         margin-top: 150px;
+        
+     }
+    #correctanswers
+     {
+         background-color: green;
+         display: inline-block;
+         margin-right: 110px;
+         line-height: 15pt;
+         font-size: 17pt;
+     }
+    #mychartid
+     {
+         background-color: green;
+         width: 100%;
+         max-width: 750px;
+         display: inline-block;
+         margin-top: 150px;
+     }
+    #wronganswers
+     {   
+         margin-left: 110px;
+         background-color: green;
+         display: inline-block;
+         line-height: 15pt;
+         font-size: 17pt;
+     }
+    #rate-us-button
+     {   
+         background-color: green;
+         margin-top: 150px;
+         
+     }     
+    #results 
+     {
+         font-size: 45pt;
+         margin-bottom: 5px;
+     } 
+    #summaryof
+     {
+        margin-top: 0;
+        font-size: 25pt;
+     }
+    #button
+     {   
+         border: 2px solid white;
+         width: 220px;
+         height: 65px;
+         color: white;
+         font-size: 15pt;
+         background-color: inherit;
+     } 
+   
+   
     </style>
 </head>
 <body>
     <div id="main-div">
-
+        <div id="logo">
+            <img src="logo.png" alt="logo" style="width: 180px;height:40px;">
+        </div>
+        <div id="h1div">
+            <h1 id="results">Results</h1>
+            <div id="summaryof"> The summary of your answers:</div>
+        </div>
+        <div id="correctanswers">
+            <h1>Correct</h1> 
+            <h1>66.7%</h1> 
+            <h3>4/6 questions</h3>
+        </div>
+        <div id="mychartid">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="wronganswers">
+            <h1>Wrong</h1> 
+            <h1>33.3%</h1> 
+            <h3>2/6 questions</h3>
+        </div>
+        <div id="rate-us-button">
+            <button id="button">RATE US</button>
+        </div>
     </div>
+    <script>
+        var yValues = [38, 65,];
+        var barColors = [
+          "#808080",
+          "#80BBBF",  
+        ];
+        new Chart("myChart", {
+          type: "doughnut",
+          data: {
+          //  labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            cutoutPercentage: 70,
+            rotation: 80
+          }
+        });
+    </script>
 </body>
 </html>
