@@ -40,7 +40,7 @@
     font-weight: 700;
   }
  
-  #check {
+#check {
     color: aliceblue;
     font-weight: 600;
     text-align: center;
@@ -48,11 +48,11 @@
 #question {
     font-family: "Outfit", sans-serif;
     font-size: 15pt;
+    font-weight: 200;
     color: white;
-    font-weight: 400;
     text-align: center;
     letter-spacing: 1.5pt;
-   }
+}
     #ten {
     color: rgb(212, 79, 188);
     font-weight: 400;
@@ -75,14 +75,14 @@
   display: inline-block;
   margin-left: 200px;
   vertical-align: top;
-  margin-top: 40pt;
+  margin-top: 20pt;
 }
 #h1div {
-    width: 400px;
+    width: 600px;
     font-family: "Outfit", sans-serif;
-    font-size: 12pt;
+    font-size: 22pt;
     color: white;
-    margin-left: 600px;
+    margin-left: 500px;
     margin-top: 40pt;
     font-weight: 100;
     text-align: center;
@@ -96,12 +96,12 @@
 #mychartid {
   display: inline-block;
   margin-left: 700px;
-  margin-top: 30px
+  margin-top: 30px;
 }
 #allbuttons {
   width: 800px;
   margin: 0 auto;
-  margin-top: 100px;  
+  margin-top: 80px;  
 }
 #one {
   margin-bottom: 20px;
@@ -110,11 +110,15 @@
 #three {
   margin-right: 40px;
 }
+#two {
+  background-color: rgb(172, 48, 132);
+}
 #h3div {
   text-align: center;
+  margin-top: 80px;
   font-family: "Outfit", sans-serif;
   color: white;
-  margin-top: 100px;
+  padding-right: 30px;
 }
 
 </style>
@@ -122,7 +126,7 @@
 </head>
 <body>
  <div id="main-div">
-  <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;"></div>
+  <div id="logo"><img src="logo.png" alt="logo" style="width: 180px;height:40px;"></div>
    <div id="donut-text">
       <div>SECONDS</div>
       <div id="seconds">16</div>
@@ -130,9 +134,6 @@
    </div>
   <div id="mychartid" style="width:100%;max-width:350px">
     <canvas id="myChart"></canvas>
-  </div>
-  <div style="width:100%;max-width:300px;margin-left:1100px;">
-      <canvas id="myChart"></canvas>
   </div>
   <div id="h1div">
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
