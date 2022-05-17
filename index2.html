@@ -22,7 +22,13 @@
     height: 100vh;
     width: 100vw;
     }
-button{
+#logo {
+    margin-left: 190pt;
+    margin-bottom: -6pt;
+    position: relative;
+    top: 60px;
+  }
+  button{
     width: 350px;
     height: 80px;
     background-color:inherit;
@@ -32,6 +38,29 @@ button{
     color: white;
     font-size: 12pt;
     font-weight: 700;
+    margin-bottom: 80pt;  
+  }
+  #create {
+    width: 580px;
+    font-family: "Outfit", sans-serif;
+    font-size: 38pt;
+    margin-top: 80pt;
+    margin-left: 360pt;
+    font-weight: 400;
+    /*display: inline-block;*/
+    color: white;
+    font-weight: 200;
+    line-height: 103%;
+    margin-bottom: 45px;
+    text-align: center;
+    letter-spacing: 0.5pt;
+    left: 500px;
+    top: 250px;
+  }
+  #check {
+    color: aliceblue;
+    font-weight: 600;
+    text-align: center;
 }
 #question {
     width: 580px;
@@ -45,7 +74,7 @@ button{
     text-align: center;
     letter-spacing: 1.5pt;
    }
-#ten {
+    #ten {
     color: rgb(212, 79, 188);
     font-weight: 400;
     text-align: center;
@@ -109,6 +138,7 @@ button{
   color: white;
   letter-spacing: 1.5pt;
 }
+
 </style>
 
 </head>
@@ -122,6 +152,11 @@ button{
    </div>
   <div id="mychartid" style="width:100%;max-width:350px">
     <canvas id="myChart"></canvas>
+      <div>REMAINING</div>
+    </div>
+    <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;"></div>
+    <div style="width:100%;max-width:300px;margin-left:1100px;">
+      <canvas id="myChart"></canvas>
   </div>
   <div id="h1div">
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
