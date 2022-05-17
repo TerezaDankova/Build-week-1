@@ -29,48 +29,42 @@
     }
     #logo 
      {
-        background-color: green;
         text-align: left;
         position: relative;
         top: 80px;
-        left: 80px;
+        
      }
     #h1div 
      {
-         background-color: green;
-         margin-top: 150px;
+         margin-top: 175px;
         
      }
     #correctanswers
      {
-         background-color: green;
          display: inline-block;
-         margin-right: 110px;
+         margin-right: 50px;
          line-height: 15pt;
          font-size: 17pt;
+         position: relative;
+         bottom: 115px;
      }
     #mychartid
      {
-         background-color: green;
          width: 100%;
          max-width: 750px;
          display: inline-block;
-         margin-top: 150px;
-     }
+         margin-top: 90px;
+     }   
     #wronganswers
      {   
-         margin-left: 110px;
-         background-color: green;
+         margin-left: 50px;
          display: inline-block;
          line-height: 15pt;
          font-size: 17pt;
+         position: relative;
+         bottom: 115px;
      }
-    #rate-us-button
-     {   
-         background-color: green;
-         margin-top: 150px;
-         
-     }     
+   
     #results 
      {
          font-size: 45pt;
@@ -90,14 +84,33 @@
          font-size: 15pt;
          background-color: inherit;
      } 
-   
-   
+    h5
+     {
+         margin-top: 3px;
+         margin-bottom: 3px;
+         font-size: 10pt;
+     }
+    #text
+     {   
+         position: relative;
+         bottom: 280px;
+     } 
+    #exampassed
+     {
+         color: rgb(105, 185, 158);
+         margin-bottom: 22px;
+         font-size: 13pt;
+     } 
+    #congratulations
+     {
+         font-size: 13pt;
+     } 
     </style>
 </head>
 <body>
     <div id="main-div">
         <div id="logo">
-            <img src="logo.png" alt="logo" style="width: 180px;height:40px;">
+            <img src="logo.png" alt="logo" style="width: 280px;height:70px;">
         </div>
         <div id="h1div">
             <h1 id="results">Results</h1>
@@ -115,6 +128,14 @@
             <h1>Wrong</h1> 
             <h1>33.3%</h1> 
             <h3>2/6 questions</h3>
+        </div>
+        <div id="text">
+            <h5 id="congratulations">Congratulations!</h5>
+            <h5 id="exampassed">You passed the exam.</h5>
+            <h5>We'll send you the certificate</h5>
+            <h5>in few minutes</h5>
+            <h5>Check your email (including</h5>
+            <h5>promotions/spam folder)</h5>
         </div>
         <div id="rate-us-button">
             <button id="button">RATE US</button>
