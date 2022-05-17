@@ -23,16 +23,16 @@
     width: 100vw;
     }
 #logo {
+  
     margin-left: 190pt;
     margin-bottom: 80pt;
     position: relative;
     top: 60px;
+    
   }
   button{
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    width: 350px;
+    height: 80px;
     background-color:inherit;
     border-bottom: 0px;
     border-radius: 50px;
@@ -41,6 +41,7 @@
     font-size: 12pt;
     font-weight: 700;
     margin-bottom: 80pt;
+   
   }
   #create {
     width: 580px;
@@ -49,18 +50,22 @@
     margin-top: 80pt;
     margin-left: 360pt;
     font-weight: 400;
-    display: inline-block;
+    /*display: inline-block;*/
     color: white;
     font-weight: 200;
     line-height: 103%;
     margin-bottom: 45px;
     text-align: center;
     letter-spacing: 0.5pt;
+    position: relative;
+    left: 500px;
+    top: 250px;
   }
   #check {
     color: aliceblue;
     font-weight: 600;
     text-align: center;
+    
 }
 #question {
     width: 580px;
@@ -69,35 +74,88 @@
     margin-top: 260pt;
     margin-left: 360pt;
     font-weight: 200;
-    display: inline-block;
+    /*display: inline-block;*/
     color: white;
     font-weight: 400;
     line-height: 103%;
     margin-bottom: 45px;
     text-align: center;
     letter-spacing: 1.5pt;
+    position: relative;
+    left: 490px;
+    
+   
   }
   #ten {
     color: rgb(212, 79, 188);
     font-weight: 400;
     text-align: center;
 }
+#mychartid {
+  /*position: absolute;
+  display: inline-block;*/
+  position: relative;
+  left: 1900px;
+  bottom: 240px;
+}
+#one {
+  position: relative;
+  left: 920px;
+  top: 120px;
+}
+#two{
+  position: relative;
+  left: 980px;
+  top: 120px;
+  background-color: rgb(171, 41, 108);
+}
+#three {
+  position: relative;
+  left: 214px;
+  top: 260px;
+}
+#four {
+  position: relative;
+  left: 278px;
+  top: 260px;
+}
+#donut-text{
+  text-align: center;
+  color: white;
+  position: relative;
+  left: 795px;
+  top: 190px;
+  line-height: 25px;
+  font-size: 10pt;
+  
+}
+#seconds {
+  font-size: 30pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 </style>
 
 </head>
 <body>
   <div id="main-div">
+    <div id="donut-text">
+      <div>SECONDS</div>
+      <div id="seconds">16</div>
+      <div>REMAINING</div>
+    
+    </div>
     <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;"></div>
       <h1 id="create">
        How can I create a <span id="check">checkbox in HTML?</span> 
     </h1>
-    <div  style="width:100%;max-width:1000px">
+    <div id="mychartid" style="width:100%;max-width:350px">
         <canvas id="myChart"></canvas>
     </div>
-    <button> &lt;input type="check"&gt; </button>
-    <button> &lt;input type="check"&gt; </button>
-    <button> &lt;input type="check"&gt; </button>
-    <button> &lt;input type="check"&gt; </button>
+    <button id="one"> &lt;input type="check"&gt; </button>
+    <button id="two"> &lt;input type="checkbox"&gt; </button>
+    <button id="three"> &lt;checkbox&gt; </button>
+    <button id="four"> &lt;input type="button"&gt; </button>
     <h3 id="question">
       QUESTION 1 <span id="ten">/ 10</span> 
    </h3>
@@ -108,7 +166,7 @@
     var yValues = [38, 65,];
     var barColors = [
       "#808080",
-      "#00FFFF",
+      "#80BBBF",
       
     ];
     
