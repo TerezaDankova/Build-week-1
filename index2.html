@@ -35,15 +35,7 @@
    
   }
   #create {
-    width: 580px;
-    font-family: "Outfit", sans-serif;
-    font-size: 38pt;
-    font-weight: 400;
-    color: white;
-    font-weight: 200;
-    line-height: 103%;
-    text-align: center;
-    letter-spacing: 0.5pt;
+   
   
   }
   #check {
@@ -76,18 +68,39 @@
 
 
 #donut-text{
-  text-align: center;
+  display: inline-block;
   color: white;
-  line-height: 25px;
   font-size: 10pt;
+  background-color: rgb(107, 189, 93);
   
 }
 #seconds {
   font-size: 30pt;
  
 }
-#myChat {
-   
+#logo {
+  display: inline-block;
+  background-color: rgb(94, 209, 104);
+}
+#h1div {
+    width: 580px;
+    font-family: "Outfit", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    background-color: rgb(71, 194, 91);
+}
+#mychartid {
+  display: inline-block;
+  
+  background-color: rgb(84, 191, 106);
+}
+#allbuttons {
+  background-color: rgb(92, 195, 104);
+}
+#h3div {
+  background-color: rgb(81, 185, 92);
 }
 </style>
 
@@ -104,29 +117,30 @@
   <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;">
   </div>
 
-  <div  style="width:100%;max-width:300px">
-      <canvas id="myChart"></canvas>
+  <div id="mychartid" style="width:100%;max-width:350px">
+    <canvas id="myChart"></canvas>
   </div>
-  <div>
-    <h1 id="create">
-       How can I create a <span id="check">checkbox in HTML?</span> 
-    </h1>
+
+  <div id="h1div">
+    <h1> How can I create a <span id="check">checkbox in HTML?</span></h1>
   </div>
-    <div id="mychartid" style="width:100%;max-width:350px">
-        <canvas id="myChart"></canvas>
-    </div>
-    <div>
+
+  
+
+  <div id="allbuttons">
     <button id="one"> &lt;input type="check"&gt; </button>
     <button id="two"> &lt;input type="checkbox"&gt; </button>
     <button id="three"> &lt;checkbox&gt; </button>
     <button id="four"> &lt;input type="button"&gt; </button>
-   </div>
-   <div>
-    <h3 id="question">
-      QUESTION 1 <span id="ten">/ 10</span> 
-   </h3>
   </div>
- </div>
+
+  <div id="h3div">
+    <h3 id="question">QUESTION 1 <span id="ten">/ 10</span> </h3>
+  </div>
+
+</div>
+
+
   <script>
     
     var yValues = [38, 65,];
