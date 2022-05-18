@@ -61,7 +61,8 @@
   border: 2px solid white;
   margin-left: 190pt; 
   display: inline-block;
-  margin-top: 0px
+  margin-top: 0px;
+  cursor: pointer
   }
 
   .selected {
@@ -98,6 +99,7 @@ ul {
   background-color: aqua;
   box-shadow: -3px -2px 35px 8px rgba(0, 255, 255, 0.35);
   border: 0px;
+  cursor: pointer;
 }
 #logo {
   margin-left: 190pt;
@@ -126,13 +128,9 @@ ul {
   </ul>
   <div id="checkbox"></div>
   <span id="span">I promise to answer myself without help from anyone</span>
-  <button id="button">PROCEED</button>
+  <button id="button" onclick="proceedButton()">PROCEED</button>
 </div>
-<script>
-  const checkbox =document.querySelector("#checkbox")
-  checkbox.addEventListener("click", function () {
-    checkbox.classList.toggle("selected")
-  })
+<script src="index.js">
 </script>
 </body>
 </html>
