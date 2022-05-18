@@ -110,9 +110,6 @@
 #three {
   margin-right: 40px;
 }
-#two {
-  background-color: rgb(172, 48, 132);
-}
 #h3div {
   text-align: center;
   margin-top: 80px;
@@ -120,7 +117,9 @@
   color: white;
   padding-right: 30px;
 }
-
+.classname {
+  background-color: blueviolet;
+}
 </style>
 
 </head>
@@ -139,17 +138,16 @@
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
   </div>
   <div id="allbuttons">
-    <button id="one"> &lt;input type="check"&gt; </button>
-    <button id="two"> &lt;input type="checkbox"&gt; </button>
-    <button id="three"> &lt;checkbox&gt; </button>
-    <button id="four"> &lt;input type="button"&gt; </button>
+    <button id="one" > &lt;input type="check"&gt; </button>
+    <button id="two" > &lt;input type="checkbox"&gt; </button>
+    <button id="three" > &lt;checkbox&gt; </button>
+    <button id="four" > &lt;input type="button"&gt; </button>
   </div>
   <div id="h3div">
     <h3 id="question">QUESTION 1 <span id="ten">/ 10</span> </h3>
   </div>
 
 </div>
-
 
   <script>
     
@@ -174,6 +172,16 @@
         rotation: 80
       }
     });
+
+    let buttonNode = 
+    document.querySelectorAll("#allbuttons button")
+    buttonNode.addEventListener("click", function buttons() {
+      for(let i = 0; i < buttonNode.length; i++)
+      {buttonNode[i].classList.add("classname")
+
+      }
+    })
+
     </script>
 </body>
 </html>
