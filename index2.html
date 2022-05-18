@@ -39,9 +39,6 @@
     font-size: 12pt;
     font-weight: 700;
   }
- button:focus{
-   background-color: aqua;
- } 
  
 #check {
     color: aliceblue;
@@ -120,9 +117,10 @@
   color: white;
   padding-right: 30px;
 }
-.classname {
+button:focus {
   background-color: blueviolet;
 }
+
 </style>
 
 </head>
@@ -141,10 +139,10 @@
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
   </div>
   <div id="allbuttons">
-    <button id="one" > &lt;input type="check"&gt; </button>
-    <button id="two" > &lt;input type="checkbox"&gt; </button>
-    <button id="three" > &lt;checkbox&gt; </button>
-    <button id="four" > &lt;input type="button"&gt; </button>
+    <button id="one" onclick="buttons()"> &lt;input type="check"&gt; </button>
+    <button id="two" onclick="buttons()"> &lt;input type="checkbox"&gt; </button>
+    <button id="three" onclick="buttons()"> &lt;checkbox&gt; </button>
+    <button id="four" onclick="buttons()"> &lt;input type="button"&gt; </button>
   </div>
   <div id="h3div">
     <h3 id="question">QUESTION 1 <span id="ten">/ 10</span> </h3>
@@ -178,13 +176,12 @@
 
     let buttonNode = 
     document.querySelectorAll("#allbuttons button")
-    buttonNode.addEventListener("click", function buttons() {
+    function buttons() {
       for(let i = 0; i < buttonNode.length; i++)
-      {buttonNode[i].classList.add("classname")
+      {buttonNode[i].classList.toggle("classname")}
 
-      }
-    })
 
+   
     </script>
 </body>
 </html>
