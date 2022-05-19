@@ -8,12 +8,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
   <style>
-    body{
+body{
     margin: 0px;
     background: #0e0e0e;
     height: 100%;
     }
-    #main-div {
+#main-div {
     background-image: url('bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,13 +22,7 @@
     height: 100vh;
     width: 100vw;
     }
-#logo {
-    margin-left: 190pt;
-    margin-bottom: -6pt;
-    position: relative;
-    top: 60px;
-  }
-  button{
+button{
     width: 350px;
     height: 80px;
     background-color:inherit;
@@ -40,11 +34,10 @@
     font-weight: 700;
     cursor: pointer;
   }
- 
 #check {
     color: aliceblue;
     font-weight: 600;
-    text-align: center;
+    text-align: center;    
 }
 #question {
     font-family: "Outfit", sans-serif;
@@ -54,7 +47,7 @@
     text-align: center;
     letter-spacing: 1.5pt;
 }
-    #ten {
+#ten {
     color: rgb(212, 79, 188);
     font-weight: 400;
     text-align: center;
@@ -64,78 +57,75 @@
   display: inline-block;
   color: white;
   font-size: 5pt;
-  position: relative;
+  position: absolute;
   text-align: center;
-  left: 900px;
-  top: -55px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 }
 #seconds {
   font-size: 30pt; 
 }
 #logo {
-  display: inline-block;
-  margin-left: 200px;
-  vertical-align: top;
-  margin-top: 10pt;
+    display: inline-block;
+    margin-left: 100px;
+    top: 50px;
+    position: relative;
 }
-
 #h1div {
-    width: 600px;
+    width:100%;
     font-family: "Outfit", sans-serif;
     font-size: 22pt;
     color: white;
-    margin-left: 500px;
-    margin-top: 40pt;
+    display: flex;
+    justify-content: center;
+    margin-top: 0pt;
     font-weight: 100;
     text-align: center;
 }
 #h1 {
-  font-weight: 100;
+    font-weight: 100;
+    width: 600px;
 }
 #check {
-  font-weight: 800;
-}
-#mychartid {
-  display: inline-block;
-  margin-left: 700px;
-  margin-top: 30px;
+    font-weight: 800;
 }
 #allbuttons {
-  width: 800px;
-  margin: 0 auto;
-  margin-top: 80px;  
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 66px;  
 }
 #one {
-  margin-bottom: 20px;
-  margin-right: 40px;
+    margin-bottom: 20px;
+    margin-right: 40px;
 }
 #three {
-  margin-right: 40px;
+    margin-right: 40px;
 }
 #h3div {
-  text-align: center;
-  margin-top: 80px;
-  font-family: "Outfit", sans-serif;
-  color: white;
-  padding-right: 30px;
+    text-align: center;
+    margin-top: 80px;
+    font-family: "Outfit", sans-serif;
+    color: white;
+    padding-right: 30px;
 }
 button:focus {
-  background-color: blueviolet;
+    background-color: blueviolet;
 }
-
 </style>
 
 </head>
 <body>
  <div id="main-div">
-  <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;"></div>
-   <div id="donut-text">
+  <div id="logo"><img src="logo.png" alt="logo" style="width: 160px;height:40px;">
+  </div>
+  <div style="position: relative; max-width: 350px; margin-left: auto;">
+    <canvas style="width:100%;max-width:350px;" id="myChart"></canvas>
+    <div id="donut-text">
       <div>SECONDS</div>
       <div id="seconds">16</div>
       <div>REMAINING</div> 
    </div>
-  <div id="mychartid" style="width:100%;max-width:350px">
-    <canvas id="myChart"></canvas>
   </div>
   <div id="h1div">
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
