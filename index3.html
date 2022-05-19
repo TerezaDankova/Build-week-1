@@ -27,16 +27,15 @@
         
        
     }
-    #logo 
-     {
-        text-align: left;
+    #logo  {
+        margin-right: 780pt;
         position: relative;
-        top: 80px;
+        top: 60px;
         
      }
     #h1div 
      {
-         margin-top: 175px;
+         margin-top: 81px;
         
      }
     #correctanswers
@@ -53,8 +52,9 @@
          width: 100%;
          max-width: 750px;
          display: inline-block;
-         margin-top: 90px;
-     }   
+         margin-top: 46px;
+        }  
+  
     #wronganswers
      {   
          margin-left: 50px;
@@ -67,7 +67,7 @@
    
     #results 
      {
-         font-size: 45pt;
+         font-size: 40pt;
          margin-bottom: 5px;
      } 
     #summaryof
@@ -97,7 +97,7 @@
      } 
     #exampassed
      {
-         color: rgb(105, 185, 158);
+         color: rgb(0, 255, 255);
          margin-bottom: 22px;
          font-size: 13pt;
      } 
@@ -105,12 +105,15 @@
      {
          font-size: 13pt;
      } 
+     #rate-us-button {
+        margin-top: -118px;
+     }
     </style>
 </head>
 <body>
     <div id="main-div">
         <div id="logo">
-            <img src="logo.png" alt="logo" style="width: 280px;height:70px;">
+            <img src="logo.png" alt="logo" style="width: 160px;height:40px;">
         </div>
         <div id="h1div">
             <h1 id="results">Results</h1>
@@ -144,8 +147,8 @@
     <script>
         var yValues = [38, 65,];
         var barColors = [
-          "#808080",
-          "#80BBBF",  
+          "#D20094",
+          "#00FFFF",  
         ];
         new Chart("myChart", {
           type: "doughnut",
