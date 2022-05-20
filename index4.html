@@ -103,6 +103,27 @@
     .blue {
         color: rgb(0,255,255);
     }
+    .rating {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+    .rating li {
+        list-style-type: none
+    }
+    .rating-item {
+        cursor: pointer;
+        font-size: 2em;
+        color:aqua;
+
+    }
+    .rating-item::before {
+        content: "\2605";
+    }
+    .rating-item.active ~ .rating-item::before {
+        content: "\2606";
+    }
     </style>
 </head>
 <body>
@@ -116,7 +137,19 @@
         <div id="text1">From 0 to 10, how likely are you to recommend EPICODE</div>
         <div id="text2">to a friend or a colleague?</div>
         <div id="star">
-            <span class="blue">&#9733;</span>
+            <ul class="rating">
+                <li class="rating-item" data-rate="1"></li>
+                <li class="rating-item active" data-rate="2"></li>
+                <li class="rating-item" data-rate="3"></li>
+                <li class="rating-item" data-rate="4"></li>
+                <li class="rating-item" data-rate="5"></li>
+                <li class="rating-item" data-rate="6"></li>
+                <li class="rating-item" data-rate="7"></li>
+                <li class="rating-item" data-rate="8"></li>
+                <li class="rating-item" data-rate="9"></li>
+                <li class="rating-item" data-rate="10"></li>
+            </ul>
+       <!-- <span class="blue">&#9733;</span>
             <span class="blue">&#9733;</span>
             <span class="blue">&#9733;</span>
             <span class="blue">&#9733;</span>
@@ -125,7 +158,7 @@
             <span>&#9733;</span>
             <span>&#9733;</span>
             <span>&#9733;</span>
-            <span>&#9733;</span>
+            <span>&#9733;</span>-->
         </div>
         <div id="feedback">
             Leave us an open feedback about your experience so far
@@ -160,9 +193,18 @@
                 window.location.href = "https://epicode.com/"; 
                 }
             }
-        
-       
-
+            const container = document.querySelector('.rating')
+            const items = container.querySelectorAll('.rating-item')
+            container.onclick = e => {
+                const elClass = e.target.classList;
+                if (!elClass.contains('active')) {
+                    items.forEach (
+                        item => item.classList.remove('active')
+                    );
+                    console.log(e.target.getAttribute("data-rate"));
+                    elClass.add('active');
+                }
+            }
     </script>
 
 </body>
