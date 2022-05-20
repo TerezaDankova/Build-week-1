@@ -8,11 +8,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
      body{
-        margin: 0px;
         background: #0e0e0e;
         height: 100%;
         color: white;
-        text-align: center;
         font-family: "Outfit", sans-serif;
         
     }
@@ -23,91 +21,115 @@
         background-position: center center;
         background-attachment: fixed;
         height: 100vh;
-        width: 100vw;
-        
-       
+        width: 100vw;  
     }
     #logo  {
-        margin-right: 780pt;
+        display: inline-block;
+        margin-left: 100px;
+        top: 50px;
         position: relative;
-        top: 60px;
-        
      }
-    #h1div 
-     {
-         margin-top: 81px;
-        
+    #h1div {
+        font-family: "Outfit", sans-serif;
+        font-size: 22pt;
+        color: white;
+        display: flex;
+        margin-top: 0pt;
+        font-weight: 100;
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
      }
     #correctanswers
      {
          display: inline-block;
-         margin-right: 50px;
          line-height: 15pt;
          font-size: 17pt;
          position: relative;
-         bottom: 115px;
+         left: 20%;
+         bottom: 30%;
      }
-    #mychartid
-     {
-         width: 100%;
-         max-width: 750px;
-         display: inline-block;
-         margin-top: 46px;
-        }  
-  
     #wronganswers
      {   
-         margin-left: 50px;
          display: inline-block;
          line-height: 15pt;
          font-size: 17pt;
          position: relative;
-         bottom: 115px;
+         left: 60%;
+         bottom: 30%;
      }
-   
     #results 
      {
-         font-size: 40pt;
-         margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 40pt;
      } 
-    #summaryof
-     {
-        margin-top: 0;
-        font-size: 25pt;
+    #summaryof{
+        font-size: 20pt;
+        letter-spacing: 0.5pt;
+        margin-top: -2%;
+        margin-bottom: 5%;
      }
-    #button
-     {   
+    #button {   
          border: 2px solid white;
          width: 220px;
          height: 65px;
          color: white;
          font-size: 15pt;
          background-color: inherit;
+         cursor: pointer;
+         transition: background 0.15s linear 0.1s , color 0.15s linear 0s;
      } 
-    h5
-     {
-         margin-top: 3px;
-         margin-bottom: 3px;
-         font-size: 10pt;
-     }
-    #text
-     {   
-         position: relative;
-         bottom: 280px;
+    #button:hover {
+         background: #00EEEE;
+         color: rgb(210, 0, 148);
+         box-shadow: 0px 0px 45px rgb(210, 0, 148);
+         border-color: rgb(210, 0, 148);
+         font-weight: bold;
+    }
+    #text {   
+         display: inline-block;
+         position: absolute;
+         text-align: center;
+         top:50%;
+         left:50%;
+         transform: translate(-50%, -50%);
      } 
     #exampassed
      {
-         color: rgb(0, 255, 255);
-         margin-bottom: 22px;
-         font-size: 13pt;
+       width: 234px;
+       color: rgb(0, 255, 255);
+       font-size: 13pt;
+       margin-bottom: 17%;
+       letter-spacing: 0.5pt;
+    
      } 
-    #congratulations
-     {
-         font-size: 13pt;
-     } 
-     #rate-us-button {
-        margin-top: -118px;
+     #certificate {
+        font-weight: 100;
+        font-size: 9pt;
+        line-height: 0;
+        margin-top: -3%;
+        letter-spacing: 0.5pt;
+        color: aliceblue;
      }
+    #congratulations {   
+       font-size: 13pt;
+       margin-top: 8%;
+       margin-bottom: -12%;
+       letter-spacing: 0.5pt;
+    } 
+     #rate-us-button {
+       text-align: center;
+       position: relative;
+       bottom: 14%;
+     }
+     #correct-wrong {
+      position: relative;
+      bottom: 33%;
+    }
+    #texttwo {
+      font-weight: lighter;
+    }
     </style>
 </head>
 <body>
@@ -119,44 +141,53 @@
             <h1 id="results">Results</h1>
             <div id="summaryof"> The summary of your answers:</div>
         </div>
-        <div id="correctanswers">
+        <div style="position: relative; max-width: 750px;margin: auto;">
+           <canvas  style="width:100%; max-width:750px;" id="myChart"></canvas>
+           <div id="text">
+            <h5 id="congratulations">Congratulations!</h5>
+            <h5 id="exampassed"> You passed the exam.</h5>
+            <h5 id="certificate">We'll send you the certificate</h5>
+            <h5 id="certificate">in few minutes</h5>
+            <h5 id="certificate">Check your email (including</h5>
+            <h5 id="certificate">promotions / spam folder)</h5>
+            </div>
+        </div>
+        <div id="correct-wrong">
+           <div id="correctanswers">
             <h1>Correct</h1> 
             <h1>66.7%</h1> 
-            <h3>4/6 questions</h3>
-        </div>
-        <div id="mychartid">
-            <canvas id="myChart"></canvas>
-        </div>
-        <div id="wronganswers">
+            <h3 id="texttwo">4/6 questions</h3>
+           </div>
+           <div id="wronganswers">
             <h1>Wrong</h1> 
             <h1>33.3%</h1> 
-            <h3>2/6 questions</h3>
-        </div>
-        <div id="text">
-            <h5 id="congratulations">Congratulations!</h5>
-            <h5 id="exampassed">You passed the exam.</h5>
-            <h5>We'll send you the certificate</h5>
-            <h5>in few minutes</h5>
-            <h5>Check your email (including</h5>
-            <h5>promotions/spam folder)</h5>
+            <h3 id="texttwo">2/6 questions</h3>
+           </div>
         </div>
         <div id="rate-us-button">
             <button id="button">RATE US</button>
         </div>
     </div>
+
+
     <script>
         var yValues = [38, 65,];
         var barColors = [
           "#D20094",
           "#00FFFF",  
         ];
+        var bordorColors = [
+           "#050505",
+           "#050505",  
+        ];
         new Chart("myChart", {
           type: "doughnut",
           data: {
-          //  labels: xValues,
             datasets: [{
               backgroundColor: barColors,
-              data: yValues
+              data: yValues,
+              borderWidth: 1,
+              borderColor: bordorColors,
             }]
           },
           options: {
@@ -164,6 +195,15 @@
             rotation: 80
           }
         });
+
+
+        let buttonNode = document.querySelector("button")
+         buttonNode.addEventListener("click", function goToRatePage(){
+          window.location.href = "index4.html"; 
+          })
+
+
+
     </script>
 </body>
 </html>
