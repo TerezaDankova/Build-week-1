@@ -47,10 +47,9 @@
          margin-top: 50px;
          color: black;
      }
-    .blue
-     {
-         color: aqua;
-     }
+    .starscolor {
+        color: rgb(0,255,255);
+    }
     #feedback
      {   
          margin-top: 50px;
@@ -78,7 +77,24 @@
          background-color: aqua;
          box-shadow: 0px 0px 45px #3dbaca;
          border: 0px;
+         cursor: pointer;
      }
+     #inputtext {
+        background-color: transparent;
+        font-family: "Outfit", sans-serif;
+        font-size: 18px;
+        width: 40%;
+        height: 20px;
+        color: gray;
+        border: none;
+        padding-left: 30px;
+        font-weight: lighter;
+        cursor: pointer;
+        outline: none;
+     }
+    .blue {
+        color: rgb(0,255,255);
+    }
     </style>
 </head>
 <body>
@@ -107,15 +123,40 @@
             Leave us an open feedback about your experience so far
         </div>
         <div id="comment">
-            write your comment here
+            <input type="text" id="inputtext" placeholder="Write your comment here"> 
         </div>
         
-         <hr style="height:2px; width:20%; border-width:0; color:rgb(193, 103, 194); background-color:rgb(193, 103, 194)">
+         <hr style="height:2px; width:40%; border-width:0; color:rgb(210, 0, 148); background-color:rgb(210, 0, 148)">
        
         <div id="infobutton">
             <button id="button">MORE INFO</button>
         </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     </div>
+    <script>
+        
+        let textNode = document.getElementById("inputtext")
+        let starsNode = document.getElementsByTagName("span")
+        let buttonNode = document.querySelector("button")
+
+        buttonNode.addEventListener("click", changeColor)
+
+     
+        function changeColor(){
+            if(textNode.value === ""){
+                swal({ title: "HELLO🫠 !",
+                       text: "Please add some text!",
+            });
+            }else if(textNode.value !== ""){
+                window.location.href = "https://epicode.com/"; 
+                }
+            }
+        
+       
+
+    </script>
+
 </body>
+
 </html>

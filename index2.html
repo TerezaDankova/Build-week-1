@@ -33,6 +33,7 @@ button{
     font-size: 12pt;
     font-weight: 700;
     cursor: pointer;
+    transition: background 0.15s linear 0.1s , color 0.15s linear 0s;
   }
 #check {
     color: aliceblue;
@@ -112,6 +113,13 @@ button{
 button:focus {
     background-color: blueviolet;
 }
+.buttonshover:hover {
+    background:  rgb(210, 0, 148);
+    color: rgb(0,255,255);
+    box-shadow: 0px 0px 45px rgb(0,255,255);
+    border-color: rgb(0,255,255);
+    font-weight: bold;
+}
 </style>
 
 </head>
@@ -131,13 +139,13 @@ button:focus {
     <h1 id="h1"> How can I create a <span id="check">checkbox in HTML?</span></h1>
   </div>
   <div id="allbuttons">
-    <button id="one" onclick="buttons()"> &lt;input type="check"&gt; </button>
-    <button id="two" onclick="buttons()"> &lt;input type="checkbox"&gt; </button>
-    <button id="three" onclick="buttons()"> &lt;checkbox&gt; </button>
-    <button id="four" onclick="buttons()"> &lt;input type="button"&gt; </button>
+    <button id="one" class="buttonshover" onclick="buttons()"> &lt;input type="check"&gt; </button>
+    <button id="two" class="buttonshover" onclick="buttons()"> &lt;input type="checkbox"&gt; </button>
+    <button id="three" class="buttonshover" onclick="buttons()"> &lt;checkbox&gt; </button>
+    <button id="four" class="buttonshover" onclick="buttons()"> &lt;input type="button"&gt; </button>
   </div>
   <div id="h3div">
-    <h3 id="question">QUESTION 1 <span id="ten">/ 10</span> </h3>
+    <h3 id="question">QUESTION 6 <span id="ten">/ 6</span> </h3>
   </div>
 </div>
 
@@ -147,18 +155,23 @@ button:focus {
     var barColors = [
       "#808080",
       "#00FFFF",
-      
     ];
-    
+    var bordorColors = [
+           "#050505",
+           "#050505",  
+        ];
     new Chart("myChart", {
       type: "doughnut",
       data: {
       //  labels: xValues,
-        datasets: [{
-          backgroundColor: barColors,
-          data: yValues
-        }]
+      datasets: [{
+              backgroundColor: barColors,
+              data: yValues,
+              borderWidth: 0.5,
+              borderColor: bordorColors,
+            }]
       },
+     
       options: {
         cutoutPercentage: 80,
         rotation: 80
@@ -169,10 +182,13 @@ button:focus {
     document.querySelectorAll("#allbuttons button")
     function buttons() {
       for(let i = 0; i < buttonNode.length; i++)
-      {buttonNode[i].classList.toggle("classname")}
-
+      {buttonNode[i].classList.toggle("classname")
+       window.location.href = "index3.html"; }
     }
    
+
+
+
       
    
    </script>
